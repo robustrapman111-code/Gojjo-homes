@@ -3,905 +3,379 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Gojjoጎጆ Homes - የቤትና የንብረት መፈለጊያ መድረክ">
-<title>Gojjoጎጆ Homes</title>
+<meta name="description" content="Gojjoጎጆ Homes — በኢትዮጵያ ቤት፣ መሬት፣ አፓርታማ እና ሌሎች ንብረቶችን ለሽያጭ እና ለኪራይ የሚያገናኝ መድረክ።">
+<meta name="keywords" content="Ethiopia houses, Addis Ababa houses, houses for sale Ethiopia, houses for rent Ethiopia, property Ethiopia, Gojjo Homes">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#123b28">
+<link rel="canonical" href="https://robustrapman111-code.github.io/Gojjo-homes/">
+<meta property="og:title" content="Gojjoጎጆ Homes">
+<meta property="og:description" content="ቤት፣ መሬት እና ንብረት በቀላሉ ይፈልጉ እና ያስተዋውቁ።">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://robustrapman111-code.github.io/Gojjo-homes/">
+<title>Gojjoጎጆ Homes | Ethiopian Property Listings</title>
 
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-body{
-  font-family:Arial,"Noto Sans Ethiopic",sans-serif;
-  background:#f5f7f4;
-  color:#17251d;
-}
-
-header{
-  background:#123b28;
-  color:white;
-  position:sticky;
-  top:0;
-  z-index:1000;
-  box-shadow:0 3px 15px #0003;
-}
-
-.nav{
-  max-width:1200px;
-  margin:auto;
-  padding:14px 18px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:10px;
-}
-
-.logo{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-weight:bold;
-  font-size:20px;
-}
-
-.logoIcon{
-  width:45px;
-  height:45px;
-  background:#e4ad35;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:25px;
-}
-
-.logoText span{
-  color:#e9b83f;
-}
-
-.lang{
-  background:white;
-  color:#123b28;
-  border:0;
-  border-radius:20px;
-  padding:8px 11px;
-  font-weight:bold;
-}
-
-.hero{
-  background:linear-gradient(135deg,#123b28ee,#285b3ee8),
-  url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=80");
-  background-size:cover;
-  background-position:center;
-  min-height:430px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:white;
-  padding:45px 18px;
-}
-
-.hero h1{
-  font-size:42px;
-  margin-bottom:15px;
-}
-
-.hero h1 span{
-  color:#f1bd42;
-}
-
-.hero p{
-  font-size:18px;
-  max-width:650px;
-  margin:0 auto 25px;
-  line-height:1.7;
-}
-
-.searchBox{
-  background:white;
-  padding:12px;
-  border-radius:15px;
-  max-width:850px;
-  margin:auto;
-  display:flex;
-  gap:8px;
-  box-shadow:0 10px 35px #0005;
-}
-
-.searchBox input,
-.searchBox select{
-  flex:1;
-  min-width:0;
-  border:1px solid #ddd;
-  padding:14px;
-  border-radius:9px;
-  font-size:15px;
-}
-
-.btn{
-  border:0;
-  border-radius:9px;
-  padding:13px 18px;
-  background:#d69b22;
-  color:white;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-.btn:hover{
-  opacity:.9;
-}
-
-.container{
-  max-width:1200px;
-  margin:auto;
-  padding:45px 18px;
-}
-
-.sectionTitle{
-  text-align:center;
-  margin-bottom:28px;
-}
-
-.sectionTitle h2{
-  color:#123b28;
-  font-size:30px;
-  margin-bottom:8px;
-}
-
-.sectionTitle p{
-  color:#65736a;
-}
-
-.filters{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  justify-content:center;
-  margin-bottom:30px;
-}
-
-.filterBtn{
-  border:1px solid #d7ddd8;
-  background:white;
-  padding:10px 18px;
-  border-radius:25px;
-  cursor:pointer;
-}
-
-.filterBtn.active{
-  background:#123b28;
-  color:white;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
-}
-
-.card{
-  background:white;
-  border-radius:15px;
-  overflow:hidden;
-  box-shadow:0 5px 20px #00000012;
-  transition:.2s;
-}
-
-.card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 10px 25px #0002;
-}
-
-.cardImg{
-  height:210px;
-  width:100%;
-  object-fit:cover;
-}
-
-.cardBody{
-  padding:17px;
-}
-
-.badge{
-  display:inline-block;
-  padding:5px 9px;
-  border-radius:6px;
-  background:#e8f2eb;
-  color:#17613b;
-  font-size:12px;
-  font-weight:bold;
-  margin-bottom:9px;
-}
-
-.price{
-  color:#c48410;
-  font-size:21px;
-  font-weight:bold;
-  margin:10px 0;
-}
-
-.location{
-  color:#66736b;
-  margin:7px 0 14px;
-}
-
-.cardActions{
-  display:flex;
-  gap:8px;
-}
-
-.cardActions button{
-  flex:1;
-}
-
-.contact{
-  background:#123b28;
-  color:white;
-  border:0;
-  padding:11px;
-  border-radius:8px;
-  font-weight:bold;
-}
-
-.details{
-  background:#e5ad38;
-  color:white;
-  border:0;
-  padding:11px;
-  border-radius:8px;
-  font-weight:bold;
-}
-
-.features{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-  margin-top:20px;
-}
-
-.feature{
-  background:white;
-  padding:28px 20px;
-  text-align:center;
-  border-radius:15px;
-  box-shadow:0 5px 20px #0000000d;
-}
-
-.featureIcon{
-  font-size:40px;
-  margin-bottom:12px;
-}
-
-.feature h3{
-  color:#123b28;
-  margin-bottom:8px;
-}
-
-.addSection{
-  background:#eaf0eb;
-  text-align:center;
-  padding:50px 20px;
-}
-
-.addSection h2{
-  color:#123b28;
-  margin-bottom:12px;
-}
-
-footer{
-  background:#0b281b;
-  color:#dce6df;
-  padding:35px 18px;
-  text-align:center;
-}
-
-footer strong{
-  color:#e8b33d;
-}
-
-.modal{
-  display:none;
-  position:fixed;
-  z-index:3000;
-  inset:0;
-  background:#0008;
-  padding:20px;
-  overflow:auto;
-}
-
-.modalBox{
-  background:white;
-  max-width:600px;
-  margin:40px auto;
-  border-radius:15px;
-  padding:25px;
-}
-
-.modalBox h2{
-  color:#123b28;
-  margin-bottom:18px;
-}
-
-.formGroup{
-  margin-bottom:14px;
-}
-
-.formGroup label{
-  display:block;
-  margin-bottom:6px;
-  font-weight:bold;
-}
-
-.formGroup input,
-.formGroup select,
-.formGroup textarea{
-  width:100%;
-  padding:12px;
-  border:1px solid #ddd;
-  border-radius:8px;
-  font-size:15px;
-}
-
-.formGroup textarea{
-  min-height:100px;
-}
-
-.modalButtons{
-  display:flex;
-  gap:10px;
-  margin-top:15px;
-}
-
-.closeBtn{
-  background:#777;
-}
-
-.empty{
-  text-align:center;
-  padding:40px;
-  color:#777;
-  grid-column:1/-1;
-}
-
-@media(max-width:800px){
-  .grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .features{
-    grid-template-columns:1fr;
-  }
-
-  .hero h1{
-    font-size:32px;
-  }
-
-  .searchBox{
-    flex-direction:column;
-  }
-}
-
-@media(max-width:520px){
-  .grid{
-    grid-template-columns:1fr;
-  }
-
-  .nav{
-    padding:10px 12px;
-  }
-
-  .logo{
-    font-size:16px;
-  }
-
-  .logoIcon{
-    width:38px;
-    height:38px;
-  }
-
-  .hero{
-    min-height:470px;
-  }
-}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,"Noto Sans Ethiopic",sans-serif;background:#f5f7f4;color:#17251d;line-height:1.5}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+header{background:#123b28;color:#fff;position:sticky;top:0;z-index:1000;box-shadow:0 3px 15px #0003}
+.nav{max-width:1200px;margin:auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:bold;font-size:20px}
+.logoIcon{width:45px;height:45px;background:#e4ad35;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:25px}
+.logoText span{color:#e9b83f}
+.navActions{display:flex;align-items:center;gap:8px}
+.lang{background:#fff;color:#123b28;border:0;border-radius:20px;padding:8px 11px;font-weight:bold}
+.navBtn{background:#e5ad38;color:#fff;border:0;border-radius:20px;padding:9px 13px;font-weight:bold}
+.hero{background:linear-gradient(135deg,#123b28ee,#285b3ee8),url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=80");background-size:cover;background-position:center;min-height:470px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;padding:45px 18px}
+.hero h1{font-size:44px;margin-bottom:15px}
+.hero h1 span{color:#f1bd42}
+.hero p{font-size:18px;max-width:700px;margin:0 auto 25px;line-height:1.7}
+.searchBox{background:#fff;padding:12px;border-radius:15px;max-width:1050px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr auto;gap:8px;box-shadow:0 10px 35px #0005}
+.searchBox input,.searchBox select{min-width:0;border:1px solid #ddd;padding:13px;border-radius:9px;font-size:15px;background:#fff}
+.btn{border:0;border-radius:9px;padding:13px 18px;background:#d69b22;color:#fff;font-weight:bold}
+.btn:hover{opacity:.9}
+.container{max-width:1200px;margin:auto;padding:45px 18px}
+.sectionTitle{text-align:center;margin-bottom:28px}
+.sectionTitle h2{color:#123b28;font-size:30px;margin-bottom:8px}
+.sectionTitle p{color:#65736a}
+.filters{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:25px}
+.filterBtn{border:1px solid #d7ddd8;background:#fff;padding:10px 18px;border-radius:25px}
+.filterBtn.active{background:#123b28;color:#fff}
+.resultsBar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:15px;color:#65736a;flex-wrap:wrap}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border-radius:15px;overflow:hidden;box-shadow:0 5px 20px #00000012;transition:.2s;position:relative}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 25px #0002}
+.cardImg{height:220px;width:100%;object-fit:cover}
+.favBtn{position:absolute;right:12px;top:12px;width:40px;height:40px;border:0;border-radius:50%;background:#fff;color:#123b28;font-size:20px;box-shadow:0 3px 12px #0003}
+.favBtn.active{color:#c62828}
+.cardBody{padding:17px}
+.badge{display:inline-block;padding:5px 9px;border-radius:6px;background:#e8f2eb;color:#17613b;font-size:12px;font-weight:bold;margin-bottom:9px}
+.price{color:#c48410;font-size:21px;font-weight:bold;margin:10px 0}
+.location{color:#66736b;margin:7px 0 14px}
+.cardActions{display:flex;gap:8px}
+.cardActions button{flex:1}
+.contact{background:#123b28;color:#fff;border:0;padding:11px;border-radius:8px;font-weight:bold}
+.whatsapp{background:#2b8a3e;color:#fff;border:0;padding:11px;border-radius:8px;font-weight:bold}
+.details{background:#e5ad38;color:#fff;border:0;padding:11px;border-radius:8px;font-weight:bold}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:20px}
+.feature{background:#fff;padding:28px 20px;text-align:center;border-radius:15px;box-shadow:0 5px 20px #0000000d}
+.featureIcon{font-size:40px;margin-bottom:12px}
+.feature h3{color:#123b28;margin-bottom:8px}
+.addSection{background:#eaf0eb;text-align:center;padding:55px 20px}
+.addSection h2{color:#123b28;margin-bottom:12px}
+footer{background:#0b281b;color:#dce6df;padding:35px 18px;text-align:center}
+footer strong{color:#e8b33d}
+.footerLinks{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:15px 0}
+.footerLinks a{color:#fff;text-decoration:none}
+.modal{display:none;position:fixed;z-index:3000;inset:0;background:#0008;padding:20px;overflow:auto}
+.modalBox{background:#fff;max-width:650px;margin:30px auto;border-radius:15px;padding:25px;position:relative}
+.modalBox h2{color:#123b28;margin-bottom:18px}
+.formGroup{margin-bottom:14px}
+.formGroup label{display:block;margin-bottom:6px;font-weight:bold}
+.formGroup input,.formGroup select,.formGroup textarea{width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-size:15px}
+.formGroup textarea{min-height:100px;resize:vertical}
+.modalButtons{display:flex;gap:10px;margin-top:15px}
+.closeBtn{background:#777}
+.detailImage{width:100%;max-height:380px;object-fit:cover;border-radius:12px;margin-bottom:15px}
+.detailActions{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.empty{text-align:center;padding:40px;color:#777;grid-column:1/-1;background:#fff;border-radius:15px}
+.notice{background:#fff8e1;border-left:4px solid #d69b22;padding:12px;margin:20px 0;border-radius:8px;font-size:14px}
+.small{font-size:13px;color:#65736a}
+@media(max-width:1000px){.searchBox{grid-template-columns:1fr 1fr 1fr}.searchBox input{grid-column:1/-1}.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.features{grid-template-columns:1fr}.hero h1{font-size:34px}.searchBox{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.navBtn{display:none}}
+@media(max-width:520px){.nav{padding:9px 12px}.logo{font-size:16px}.logoIcon{width:38px;height:38px}.hero{min-height:500px}}
 </style>
 </head>
 
 <body>
-
 <header>
   <div class="nav">
     <div class="logo">
       <div class="logoIcon">🏠</div>
       <div class="logoText">Gojjo<span>ጎጆ</span> Homes</div>
     </div>
-
-    <select class="lang" onchange="changeLanguage(this.value)">
-      <option value="am">አማርኛ</option>
-      <option value="om">Afaan Oromoo</option>
-      <option value="en">English</option>
-    </select>
+    <div class="navActions">
+      <button class="navBtn" onclick="openModal()" id="navAdd">➕ ንብረት ያስገቡ</button>
+      <select class="lang" onchange="changeLanguage(this.value)" aria-label="Language">
+        <option value="am">አማርኛ</option>
+        <option value="om">Afaan Oromoo</option>
+        <option value="en">English</option>
+      </select>
+    </div>
   </div>
 </header>
 
 <section class="hero">
   <div>
     <h1>Gojjo<span>ጎጆ</span> Homes</h1>
-
-    <p id="heroText">
-      በኢትዮጵያ ውስጥ ቤት፣ መሬት እና ሌሎች ንብረቶችን
-      በቀላሉ ይፈልጉ፣ ያስተዋውቁ እና ያግኙ።
-    </p>
+    <p id="heroText">በኢትዮጵያ ውስጥ ቤት፣ መሬት እና ሌሎች ንብረቶችን በቀላሉ ይፈልጉ፣ ያስተዋውቁ እና ያግኙ።</p>
 
     <div class="searchBox">
-      <input id="searchInput"
-             type="text"
-             placeholder="የቤት ወይም የአካባቢ ስም ይፈልጉ..."
-             oninput="renderProperties()">
-
+      <input id="searchInput" type="search" placeholder="የቤት ወይም የአካባቢ ስም ይፈልጉ..." oninput="renderProperties()">
       <select id="typeSearch" onchange="renderProperties()">
-        <option value="all">ሁሉም</option>
+        <option value="all">ሁሉም ዓይነት</option>
         <option value="sale">ለሽያጭ</option>
         <option value="rent">ለኪራይ</option>
       </select>
-
+      <select id="propertyKind" onchange="renderProperties()">
+        <option value="all">ሁሉም ንብረቶች</option>
+        <option value="house">ቤት</option>
+        <option value="apartment">አፓርታማ</option>
+        <option value="land">መሬት</option>
+        <option value="commercial">ንግድ ቦታ</option>
+      </select>
+      <select id="priceFilter" onchange="renderProperties()">
+        <option value="all">ሁሉም ዋጋ</option>
+        <option value="under1m">ከ 1 ሚሊዮን በታች</option>
+        <option value="1to5m">1–5 ሚሊዮን</option>
+        <option value="over5m">ከ 5 ሚሊዮን በላይ</option>
+      </select>
       <button class="btn" onclick="renderProperties()">🔍 ፈልግ</button>
     </div>
   </div>
 </section>
 
-<section class="container">
-
+<section class="container" id="properties">
   <div class="sectionTitle">
     <h2 id="propertiesTitle">የተመረጡ ንብረቶች</h2>
-    <p id="propertiesSubtitle">
-      ለሽያጭ እና ለኪራይ የቀረቡ ንብረቶች
-    </p>
+    <p id="propertiesSubtitle">ለሽያጭ እና ለኪራይ የቀረቡ ንብረቶች</p>
   </div>
 
   <div class="filters">
-    <button class="filterBtn active" onclick="setFilter('all',this)">
-      ሁሉም
-    </button>
+    <button class="filterBtn active" onclick="setFilter('all',this)">ሁሉም</button>
+    <button class="filterBtn" onclick="setFilter('sale',this)">🏷️ ሽያጭ</button>
+    <button class="filterBtn" onclick="setFilter('rent',this)">🏠 ኪራይ</button>
+    <button class="filterBtn" onclick="showFavorites(this)">❤️ የተወደዱ</button>
+  </div>
 
-    <button class="filterBtn" onclick="setFilter('sale',this)">
-      🏷️ ሽያጭ
-    </button>
-
-    <button class="filterBtn" onclick="setFilter('rent',this)">
-      🏠 ኪራይ
-    </button>
+  <div class="resultsBar">
+    <span id="resultCount"></span>
+    <button class="filterBtn" onclick="clearSearch()">↺ ፍለጋ አጽዳ</button>
   </div>
 
   <div id="propertyGrid" class="grid"></div>
-
 </section>
 
 <section class="container">
-
   <div class="sectionTitle">
-    <h2>ለምን Gojjoጎጆ Homes?</h2>
-    <p>ቀላል፣ ፈጣን እና የአካባቢውን ገበያ ያገናኛል።</p>
+    <h2 id="whyTitle">ለምን Gojjoጎጆ Homes?</h2>
+    <p id="whySubtitle">ቀላል፣ ፈጣን እና የአካባቢውን ገበያ ያገናኛል።</p>
   </div>
-
   <div class="features">
-
-    <div class="feature">
-      <div class="featureIcon">🔎</div>
-      <h3>ቀላል ፍለጋ</h3>
-      <p>በአካባቢ፣ በንብረት አይነት እና በሽያጭ/ኪራይ ይፈልጉ።</p>
-    </div>
-
-    <div class="feature">
-      <div class="featureIcon">📷</div>
-      <h3>ፎቶ ያስገቡ</h3>
-      <p>የንብረትዎን ፎቶ ጨምረው ለሌሎች ያሳዩ።</p>
-    </div>
-
-    <div class="feature">
-      <div class="featureIcon">🤝</div>
-      <h3>በቀጥታ ያግኙ</h3>
-      <p>ከንብረት ባለቤቶች ጋር በቀጥታ ይገናኙ።</p>
-    </div>
-
+    <div class="feature"><div class="featureIcon">🔎</div><h3>ቀላል ፍለጋ</h3><p>በአካባቢ፣ በንብረት አይነት እና በሽያጭ/ኪራይ ይፈልጉ።</p></div>
+    <div class="feature"><div class="featureIcon">📷</div><h3>ፎቶ ያስገቡ</h3><p>የንብረትዎን ፎቶ ጨምረው ለሌሎች ያሳዩ።</p></div>
+    <div class="feature"><div class="featureIcon">🤝</div><h3>በቀጥታ ያግኙ</h3><p>ከንብረት ባለቤቶች ጋር በስልክ ወይም WhatsApp ይገናኙ።</p></div>
   </div>
+  <div class="notice">ℹ️ <strong>ማስታወሻ:</strong> ይህ የመጀመሪያ የGitHub Pages ስሪት ነው። ከስልክዎ የሚጨመሩ ንብረቶች በዚያ መሣሪያ ብቻ ይቀመጣሉ። ሁሉም ተጠቃሚዎች እንዲያዩት የሚያስችል የdatabase/backend ስርዓት በሚቀጥለው ደረጃ እንጨምራለን።</div>
 </section>
 
 <section class="addSection">
-  <h2>ንብረትዎን ማስታወቅ ይፈልጋሉ?</h2>
-  <p style="margin-bottom:20px;">
-    ቤትዎን፣ መሬትዎን ወይም ሌላ ንብረትዎን በGojjoጎጆ Homes ላይ ያስተዋውቁ።
-  </p>
+  <h2 id="addTitle">ንብረትዎን ማስታወቅ ይፈልጋሉ?</h2>
+  <p style="margin-bottom:20px;" id="addText">ቤትዎን፣ መሬትዎን ወይም ሌላ ንብረትዎን በGojjoጎጆ Homes ላይ ያስተዋውቁ።</p>
   <button class="btn" onclick="openModal()">➕ ንብረት ያስገቡ</button>
 </section>
 
 <footer>
   <p><strong>Gojjoጎጆ Homes</strong></p>
-  <p style="margin-top:8px;">
-    Ethiopian Property Listing Platform
-  </p>
-  <p style="margin-top:15px;font-size:13px;">
-    © 2026 Gojjoጎጆ Homes. All Rights Reserved.
-  </p>
+  <p style="margin-top:8px;">Ethiopian Property Listing Platform</p>
+  <div class="footerLinks">
+    <a href="#properties">Properties</a>
+    <a href="#privacy">Privacy</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <p id="contact" style="margin-top:10px;font-size:13px;">For listing/contact setup, use the property form above.</p>
+  <p style="margin-top:15px;font-size:13px;">© 2026 Gojjoጎጆ Homes. All Rights Reserved.</p>
 </footer>
 
-<!-- ADD PROPERTY MODAL -->
-
-<div id="propertyModal" class="modal">
-
+<!-- ADD PROPERTY -->
+<div id="propertyModal" class="modal" role="dialog" aria-modal="true">
   <div class="modalBox">
-
     <h2>➕ ንብረት ያስገቡ</h2>
-
-    <div class="formGroup">
-      <label>የንብረት ስም</label>
-      <input id="pTitle" placeholder="ለምሳሌ፦ ዘመናዊ ቪላ">
+    <div class="formGroup"><label>የንብረት ስም</label><input id="pTitle" placeholder="ለምሳሌ፦ ዘመናዊ ቪላ"></div>
+    <div class="formGroup"><label>አካባቢ</label><input id="pLocation" placeholder="ለምሳሌ፦ አዲስ አበባ"></div>
+    <div class="formGroup"><label>የንብረት አይነት</label>
+      <select id="pKind"><option value="house">ቤት</option><option value="apartment">አፓርታማ</option><option value="land">መሬት</option><option value="commercial">ንግድ ቦታ</option></select>
     </div>
-
-    <div class="formGroup">
-      <label>አካባቢ</label>
-      <input id="pLocation" placeholder="ለምሳሌ፦ አዲስ አበባ">
+    <div class="formGroup"><label>ሽያጭ / ኪራይ</label>
+      <select id="pType"><option value="sale">ለሽያጭ</option><option value="rent">ለኪራይ</option></select>
     </div>
-
-    <div class="formGroup">
-      <label>አይነት</label>
-      <select id="pType">
-        <option value="sale">ለሽያጭ</option>
-        <option value="rent">ለኪራይ</option>
-      </select>
-    </div>
-
-    <div class="formGroup">
-      <label>ዋጋ</label>
-      <input id="pPrice" placeholder="ለምሳሌ፦ 5,000,000 ብር">
-    </div>
-
-    <div class="formGroup">
-      <label>ስልክ</label>
-      <input id="pPhone" placeholder="09XXXXXXXX">
-    </div>
-
-    <div class="formGroup">
-      <label>የንብረት ፎቶ</label>
-      <input id="pImage" type="file" accept="image/*">
-    </div>
-
-    <div class="formGroup">
-      <label>መግለጫ</label>
-      <textarea id="pDescription"
-        placeholder="ስለ ንብረቱ አጭር መግለጫ..."></textarea>
-    </div>
-
-    <div class="modalButtons">
-      <button class="btn closeBtn" onclick="closeModal()">ዝጋ</button>
-      <button class="btn" onclick="addProperty()">አስገባ</button>
-    </div>
-
+    <div class="formGroup"><label>ዋጋ</label><input id="pPrice" placeholder="ለምሳሌ፦ 5,000,000 ብር"></div>
+    <div class="formGroup"><label>ስልክ</label><input id="pPhone" inputmode="tel" placeholder="09XXXXXXXX"></div>
+    <div class="formGroup"><label>የንብረት ፎቶ</label><input id="pImage" type="file" accept="image/*"></div>
+    <div class="formGroup"><label>መግለጫ</label><textarea id="pDescription" placeholder="ስለ ንብረቱ አጭር መግለጫ..."></textarea></div>
+    <div class="modalButtons"><button class="btn closeBtn" onclick="closeModal()">ዝጋ</button><button class="btn" onclick="addProperty()">አስገባ</button></div>
+    <p class="small" style="margin-top:12px">ፎቶ ከመሣሪያዎ ይምረጡ። ይህ የdemo ስሪት ነው።</p>
   </div>
 </div>
 
+<!-- DETAILS -->
+<div id="detailsModal" class="modal" role="dialog" aria-modal="true">
+  <div class="modalBox" id="detailsContent"></div>
+</div>
+
 <script>
+let currentFilter="all";
+let favorites=JSON.parse(localStorage.getItem("gojjoFavorites")||"[]");
 
-let currentFilter = "all";
-
-const defaultProperties = [
-
-{
- title:"ዘመናዊ ቤት",
- location:"አዲስ አበባ",
- type:"sale",
- price:"5,500,000 ብር",
- phone:"0911000000",
- image:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80",
- description:"ዘመናዊ እና ምቹ የመኖሪያ ቤት።"
-},
-
-{
- title:"ምቹ አፓርታማ",
- location:"አዲስ አበባ",
- type:"rent",
- price:"25,000 ብር / ወር",
- phone:"0922000000",
- image:"https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
- description:"ለቤተሰብ የሚመች ንጹህ አፓርታማ።"
-},
-
-{
- title:"ቪላ ቤት",
- location:"ቢሾፍቱ",
- type:"sale",
- price:"7,800,000 ብር",
- phone:"0933000000",
- image:"https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80",
- description:"ሰፊ ግቢ ያለው ቪላ ቤት።"
-}
-
+const defaultProperties=[
+{title:"ዘመናዊ ቤት",location:"አዲስ አበባ",type:"sale",kind:"house",price:"5,500,000 ብር",priceNumber:5500000,phone:"0911000000",image:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80",description:"ዘመናዊ እና ምቹ የመኖሪያ ቤት።"},
+{title:"ምቹ አፓርታማ",location:"አዲስ አበባ",type:"rent",kind:"apartment",price:"25,000 ብር / ወር",priceNumber:25000,phone:"0922000000",image:"https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",description:"ለቤተሰብ የሚመች ንጹህ አፓርታማ።"},
+{title:"ቪላ ቤት",location:"ቢሾፍቱ",type:"sale",kind:"house",price:"7,800,000 ብር",priceNumber:7800000,phone:"0933000000",image:"https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80",description:"ሰፊ ግቢ ያለው ቪላ ቤት።"}
 ];
 
 function getProperties(){
-
-  let saved = localStorage.getItem("gojjoProperties");
-
-  if(saved){
-    return JSON.parse(saved);
-  }
-
-  return defaultProperties;
+  const saved=localStorage.getItem("gojjoProperties");
+  return saved?JSON.parse(saved):defaultProperties;
 }
-
-function saveProperties(data){
-  localStorage.setItem("gojjoProperties",JSON.stringify(data));
-}
+function saveProperties(data){localStorage.setItem("gojjoProperties",JSON.stringify(data));}
+function esc(v){return String(v??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));}
+function digits(v){return Number(String(v||"").replace(/[^\d.]/g,""))||0;}
 
 function renderProperties(){
+  const grid=document.getElementById("propertyGrid");
+  const search=document.getElementById("searchInput").value.trim().toLowerCase();
+  const type=currentFilter==="all"?document.getElementById("typeSearch").value:currentFilter;
+  const kind=document.getElementById("propertyKind").value;
+  const pf=document.getElementById("priceFilter").value;
 
-  const grid = document.getElementById("propertyGrid");
-
-  const search =
-    document.getElementById("searchInput").value.toLowerCase();
-
-  const type =
-    currentFilter === "all"
-    ? document.getElementById("typeSearch").value
-    : currentFilter;
-
-  let properties = getProperties();
-
-  properties = properties.filter(p => {
-
-    const matchesSearch =
-      p.title.toLowerCase().includes(search) ||
-      p.location.toLowerCase().includes(search);
-
-    const matchesType =
-      type === "all" || p.type === type;
-
-    return matchesSearch && matchesType;
+  let properties=getProperties().filter(p=>{
+    const text=(p.title+" "+p.location+" "+(p.description||"")).toLowerCase();
+    const n=p.priceNumber||digits(p.price);
+    const priceOk=pf==="all"||(pf==="under1m"&&n<1000000)||(pf==="1to5m"&&n>=1000000&&n<=5000000)||(pf==="over5m"&&n>5000000);
+    return (!search||text.includes(search))&&(type==="all"||p.type===type)&&(kind==="all"||p.kind===kind)&&priceOk;
   });
 
-  grid.innerHTML = "";
+  document.getElementById("resultCount").textContent=properties.length+" ንብረት";
 
-  if(properties.length === 0){
+  if(!properties.length){grid.innerHTML='<div class="empty">😔 የተፈለገው ንብረት አልተገኘም።</div>';return;}
+  grid.innerHTML="";
 
-    grid.innerHTML =
-      '<div class="empty">😔 የተፈለገው ንብረት አልተገኘም።</div>';
-
-    return;
-  }
-
-  properties.forEach((p,index)=>{
-
-    const card = document.createElement("div");
-
-    card.className = "card";
-
-    card.innerHTML = `
-
-      <img class="cardImg"
-           src="${p.image}"
-           alt="${p.title}"
-           onerror="this.src='https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=900&q=80'">
-
+  properties.forEach((p)=>{
+    const realIndex=getProperties().indexOf(p);
+    const fav=favorites.includes(realIndex);
+    const card=document.createElement("div");
+    card.className="card";
+    card.innerHTML=`
+      <img class="cardImg" src="${esc(p.image)}" alt="${esc(p.title)}" onerror="this.src='https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=900&q=80'">
+      <button class="favBtn ${fav?"active":""}" aria-label="Favorite" onclick="toggleFavorite(${realIndex})">${fav?"♥":"♡"}</button>
       <div class="cardBody">
-
-        <span class="badge">
-          ${p.type === "sale" ? "🏷️ ለሽያጭ" : "🏠 ለኪራይ"}
-        </span>
-
-        <h3>${p.title}</h3>
-
-        <div class="price">${p.price}</div>
-
-        <div class="location">📍 ${p.location}</div>
-
-        <p style="color:#65736a;font-size:14px;margin-bottom:15px;">
-          ${p.description || ""}
-        </p>
-
+        <span class="badge">${p.type==="sale"?"🏷️ ለሽያጭ":"🏠 ለኪራይ"} · ${kindLabel(p.kind)}</span>
+        <h3>${esc(p.title)}</h3>
+        <div class="price">${esc(p.price)}</div>
+        <div class="location">📍 ${esc(p.location)}</div>
+        <p style="color:#65736a;font-size:14px;margin-bottom:15px">${esc(p.description||"")}</p>
         <div class="cardActions">
-
-          <button class="contact"
-             onclick="contactOwner('${p.phone}')">
-             📞 ያግኙ
-          </button>
-
-          <button class="details"
-             onclick="showDetails(${index})">
-             ዝርዝር
-          </button>
-
+          <button class="contact" onclick="contactOwner('${esc(p.phone)}')">📞 ያግኙ</button>
+          <button class="whatsapp" onclick="whatsappOwner('${esc(p.phone)}')">💬 WhatsApp</button>
+          <button class="details" onclick="showDetails(${realIndex})">ዝርዝር</button>
         </div>
-
-      </div>
-    `;
-
+      </div>`;
     grid.appendChild(card);
   });
 }
-
+function kindLabel(k){return {house:"ቤት",apartment:"አፓርታማ",land:"መሬት",commercial:"ንግድ"}[k]||"ንብረት";}
 function setFilter(type,button){
-
-  currentFilter = type;
-
-  document
-    .querySelectorAll(".filterBtn")
-    .forEach(b=>b.classList.remove("active"));
-
+  currentFilter=type;
+  document.querySelectorAll(".filterBtn").forEach(b=>b.classList.remove("active"));
   button.classList.add("active");
-
   renderProperties();
 }
-
-function contactOwner(phone){
-
-  if(!phone){
-    alert("የባለቤቱ ስልክ አልተገኘም።");
-    return;
-  }
-
-  window.location.href = "tel:" + phone;
+function showFavorites(button){
+  const all=getProperties();
+  const grid=document.getElementById("propertyGrid");
+  const list=all.filter((p,i)=>favorites.includes(i));
+  document.querySelectorAll(".filterBtn").forEach(b=>b.classList.remove("active"));
+  button.classList.add("active");
+  document.getElementById("resultCount").textContent=list.length+" የተወደዱ ንብረቶች";
+  if(!list.length){grid.innerHTML='<div class="empty">❤️ እስካሁን የተወደደ ንብረት የለም።</div>';return;}
+  grid.innerHTML="";
+  list.forEach(p=>{
+    const i=all.indexOf(p);
+    const card=document.createElement("div");card.className="card";
+    card.innerHTML=`<img class="cardImg" src="${esc(p.image)}" alt="${esc(p.title)}"><button class="favBtn active" onclick="toggleFavorite(${i})">♥</button><div class="cardBody"><span class="badge">${p.type==="sale"?"🏷️ ለሽያጭ":"🏠 ለኪራይ"}</span><h3>${esc(p.title)}</h3><div class="price">${esc(p.price)}</div><div class="location">📍 ${esc(p.location)}</div><div class="cardActions"><button class="contact" onclick="contactOwner('${esc(p.phone)}')">📞 ያግኙ</button><button class="details" onclick="showDetails(${i})">ዝርዝር</button></div></div>`;
+    grid.appendChild(card);
+  });
 }
-
+function toggleFavorite(i){
+  favorites=favorites.includes(i)?favorites.filter(x=>x!==i):[...favorites,i];
+  localStorage.setItem("gojjoFavorites",JSON.stringify(favorites));renderProperties();
+}
+function contactOwner(phone){if(phone)window.location.href="tel:"+phone;}
+function whatsappOwner(phone){
+  let n=String(phone).replace(/\D/g,"");
+  if(n.startsWith("0"))n="251"+n.substring(1);
+  if(n)window.open("https://wa.me/"+n+"?text="+encodeURIComponent("ሰላም፣ Gojjoጎጆ Homes ላይ ስለ ንብረቱ ማወቅ ፈልጌ ነው።"),"_blank");
+}
 function showDetails(index){
-
-  const properties = getProperties();
-
-  const p = properties[index];
-
-  if(!p) return;
-
-  alert(
-    "🏠 " + p.title +
-    "\\n\\n📍 " + p.location +
-    "\\n💰 " + p.price +
-    "\\n📞 " + p.phone +
-    "\\n\\n" + (p.description || "")
-  );
+  const p=getProperties()[index];if(!p)return;
+  document.getElementById("detailsContent").innerHTML=`
+    <img class="detailImage" src="${esc(p.image)}" alt="${esc(p.title)}">
+    <h2>${esc(p.title)}</h2>
+    <p><strong>📍 አካባቢ:</strong> ${esc(p.location)}</p>
+    <p><strong>🏷️ አይነት:</strong> ${p.type==="sale"?"ሽያጭ":"ኪራይ"} · ${kindLabel(p.kind)}</p>
+    <p><strong>💰 ዋጋ:</strong> ${esc(p.price)}</p>
+    <p style="margin-top:10px">${esc(p.description||"")}</p>
+    <div class="detailActions">
+      <button class="contact" onclick="contactOwner('${esc(p.phone)}')">📞 ስልክ ይደውሉ</button>
+      <button class="whatsapp" onclick="whatsappOwner('${esc(p.phone)}')">💬 WhatsApp</button>
+      <button class="btn closeBtn" onclick="closeDetails()">ዝጋ</button>
+    </div>`;
+  document.getElementById("detailsModal").style.display="block";
 }
-
-function openModal(){
-  document.getElementById("propertyModal").style.display="block";
+function openModal(){document.getElementById("propertyModal").style.display="block";}
+function closeModal(){document.getElementById("propertyModal").style.display="none";}
+function closeDetails(){document.getElementById("detailsModal").style.display="none";}
+function clearSearch(){
+  document.getElementById("searchInput").value="";
+  document.getElementById("typeSearch").value="all";
+  document.getElementById("propertyKind").value="all";
+  document.getElementById("priceFilter").value="all";
+  currentFilter="all";
+  document.querySelectorAll(".filterBtn").forEach(b=>b.classList.remove("active"));
+  document.querySelector(".filterBtn").classList.add("active");
+  renderProperties();
 }
-
-function closeModal(){
-  document.getElementById("propertyModal").style.display="none";
-}
-
 function addProperty(){
-
-  const title =
-    document.getElementById("pTitle").value.trim();
-
-  const location =
-    document.getElementById("pLocation").value.trim();
-
-  const type =
-    document.getElementById("pType").value;
-
-  const price =
-    document.getElementById("pPrice").value.trim();
-
-  const phone =
-    document.getElementById("pPhone").value.trim();
-
-  const description =
-    document.getElementById("pDescription").value.trim();
-
-  const imageFile =
-    document.getElementById("pImage").files[0];
-
-  if(!title || !location || !price || !phone){
-
-    alert("እባክዎ ስም፣ አካባቢ፣ ዋጋ እና ስልክ ይሙሉ።");
-
-    return;
-  }
-
-  const createProperty = (image)=>{
-
-    const properties = getProperties();
-
-    properties.unshift({
-      title,
-      location,
-      type,
-      price,
-      phone,
-      image,
-      description
-    });
-
-    saveProperties(properties);
-
-    closeModal();
-
-    document.getElementById("pTitle").value="";
-    document.getElementById("pLocation").value="";
-    document.getElementById("pPrice").value="";
-    document.getElementById("pPhone").value="";
-    document.getElementById("pDescription").value="";
-    document.getElementById("pImage").value="";
-
-    renderProperties();
-
-    alert("✅ ንብረቱ ተጨምሯል!");
+  const title=document.getElementById("pTitle").value.trim();
+  const location=document.getElementById("pLocation").value.trim();
+  const kind=document.getElementById("pKind").value;
+  const type=document.getElementById("pType").value;
+  const price=document.getElementById("pPrice").value.trim();
+  const phone=document.getElementById("pPhone").value.trim();
+  const description=document.getElementById("pDescription").value.trim();
+  const imageFile=document.getElementById("pImage").files[0];
+  if(!title||!location||!price||!phone){alert("እባክዎ ስም፣ አካባቢ፣ ዋጋ እና ስልክ ይሙሉ።");return;}
+  const create=(image)=>{
+    const properties=getProperties();
+    properties.unshift({title,location,type,kind,price,priceNumber:digits(price),phone,image,description});
+    saveProperties(properties);closeModal();document.querySelectorAll("#propertyModal input,#propertyModal textarea").forEach(e=>e.value="");document.getElementById("pImage").value="";renderProperties();alert("✅ ንብረቱ ተጨምሯል!");
   };
-
-  if(imageFile){
-
-    const reader = new FileReader();
-
-    reader.onload = function(e){
-      createProperty(e.target.result);
-    };
-
-    reader.readAsDataURL(imageFile);
-
-  }else{
-
-    createProperty(
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=900&q=80"
-    );
-  }
+  if(imageFile){const reader=new FileReader();reader.onload=e=>create(e.target.result);reader.readAsDataURL(imageFile);}
+  else create("https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=900&q=80");
 }
-
 function changeLanguage(lang){
-
-  if(lang === "en"){
-
-    document.getElementById("heroText").textContent =
-      "Find, advertise and discover homes, land and properties across Ethiopia.";
-
-    document.getElementById("propertiesTitle").textContent =
-      "Featured Properties";
-
-    document.getElementById("propertiesSubtitle").textContent =
-      "Properties available for sale and rent";
-
-  }
-
-  else if(lang === "om"){
-
-    document.getElementById("heroText").textContent =
-      "Mana, lafa fi qabeenyaalee Itoophiyaa keessatti argaman salphaatti barbaadi.";
-
-    document.getElementById("propertiesTitle").textContent =
-      "Qabeenya Filatamoo";
-
-    document.getElementById("propertiesSubtitle").textContent =
-      "Qabeenya gurgurtaa fi kireeffamaaf dhiyaate";
-
-  }
-
-  else{
-
-    document.getElementById("heroText").textContent =
-      "በኢትዮጵያ ውስጥ ቤት፣ መሬት እና ሌሎች ንብረቶችን በቀላሉ ይፈልጉ፣ ያስተዋውቁ እና ያግኙ።";
-
-    document.getElementById("propertiesTitle").textContent =
-      "የተመረጡ ንብረቶች";
-
-    document.getElementById("propertiesSubtitle").textContent =
-      "ለሽያጭ እና ለኪራይ የቀረቡ ንብረቶች";
-  }
+  const t={
+    am:{hero:"በኢትዮጵያ ውስጥ ቤት፣ መሬት እና ሌሎች ንብረቶችን በቀላሉ ይፈልጉ፣ ያስተዋውቁ እና ያግኙ።",title:"የተመረጡ ንብረቶች",sub:"ለሽያጭ እና ለኪራይ የቀረቡ ንብረቶች",why:"ለምን Gojjoጎጆ Homes?",whySub:"ቀላል፣ ፈጣን እና የአካባቢውን ገበያ ያገናኛል።",add:"ንብረትዎን ማስታወቅ ይፈልጋሉ?",addText:"ቤትዎን፣ መሬትዎን ወይም ሌላ ንብረትዎን በGojjoጎጆ Homes ላይ ያስተዋውቁ。"},
+    om:{hero:"Mana, lafa fi qabeenyaalee Itoophiyaa keessatti argaman salphaatti barbaadi, beeksisi fi argadhu.",title:"Qabeenya Filatamoo",sub:"Qabeenya gurgurtaa fi kireeffamaaf dhiyaate",why:"Maaliif Gojjoጎጆ Homes?",whySub:"Salphaa, saffisaa fi gabaa naannoo wal qunnamsiisa.",add:"Qabeenya kee beeksisuu barbaaddaa?",addText:"Mana, lafa ykn qabeenya biraa kee Gojjoጎጆ Homes irratti beeksisi."},
+    en:{hero:"Find, advertise and discover homes, land and properties across Ethiopia.",title:"Featured Properties",sub:"Properties available for sale and rent",why:"Why Gojjoጎጆ Homes?",whySub:"A simple way to connect people with property listings.",add:"Want to advertise your property?",addText:"List your house, land or other property on Gojjoጎጆ Homes."}
+  }[lang];
+  document.getElementById("heroText").textContent=t.hero;document.getElementById("propertiesTitle").textContent=t.title;document.getElementById("propertiesSubtitle").textContent=t.sub;document.getElementById("whyTitle").textContent=t.why;document.getElementById("whySubtitle").textContent=t.whySub;document.getElementById("addTitle").textContent=t.add;document.getElementById("addText").textContent=t.addText;
 }
-
-window.onclick = function(event){
-
-  const modal =
-    document.getElementById("propertyModal");
-
-  if(event.target === modal){
-    closeModal();
-  }
-};
-
+window.addEventListener("click",e=>{if(e.target.id==="propertyModal")closeModal();if(e.target.id==="detailsModal")closeDetails();});
+window.addEventListener("keydown",e=>{if(e.key==="Escape"){closeModal();closeDetails();}});
 renderProperties();
-
 </script>
 
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"Gojjoጎጆ Homes",
+  "url":"https://robustrapman111-code.github.io/Gojjo-homes/",
+  "description":"Ethiopian property listing platform for homes, land and properties."
+}
+</script>
 </body>
 </html>
